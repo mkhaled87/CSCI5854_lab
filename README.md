@@ -50,6 +50,13 @@ Contact me directly to give you iinstructions how to build the CUDD library on y
 
 #### Windows 
 
+- Open MATLAB
+- Navigate from inside Matlab to the folder [./scots-matlab/mexfiles/](scots-matlab/mexfiles).
+- Run the Matlab script file: [makewin.m](scots-matlab/mexfiles/makewin.m).
+- Once the building finishes with success, add the following folders to Matlab's path:
+  - [./scots-matlab/](scots-matlab/)
+  - [./scots-matlab/mexfiles/](scots-matlab/mexfiles/)
+
 #### MacOS and Linux
 
 ### Building OmegaThreads's Python interface
