@@ -1,6 +1,9 @@
 # Lab Materials for class CSCI 5854 (Foundations of Autonomous Systems)
 
 This repo provides the lab materials for class CSCI 5854 (Foundations of Autonomous Systems), University of Colorado Boulder, USA.
+The lab software includes the following suite of tools:
+- [SCOTS: a tool for abstraction-based controller synthesis](https://github.com/mkhaled87/scots-ready)
+- [OmegaThreads: a tool for controller synthesis from omega-regular specifications](https://github.com/mkhaled87/pFaces-OmegaThreads)
 
 To install the required software, we build and use s Docker image.
 First, make sure you have docker installed (see Docker installation guide for: [MacOS](https://docs.docker.com/docker-for-mac/install/), [Ubuntu Linux](https://docs.docker.com/engine/install/ubuntu/) or [Windows](https://docs.docker.com/docker-for-windows/install/)). Also, make sure to [configure Docker to use sufficient resources](https://docs.docker.com/config/containers/resource_constraints/) (e.g., enough CPU cores). Otherwise, OmegaThreads will run slower than expected.
