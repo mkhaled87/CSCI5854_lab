@@ -1,35 +1,25 @@
 #
 # matlab root 
 #
-MATLABROOT	= /Applications/MATLAB_R2020a.app
-
+MATLABROOT      = /Applications/MATLAB_R2020a.app
 
 #
 # compiler
 #
-#CC        = g++
-CC       	  = $(MATLABROOT)/bin/mex
-CXXFLAGS 		= -g -Wall -Wextra -std=c++11 -O3 
-
-#
-# scots
-#
-SCOTSROOT   = ../..
-SCOTSINC		= -I$(SCOTSROOT)/bdd
+CC              = $(MATLABROOT)/bin/mex
+CXXFLAGS        = -g -Wall -Wextra -std=c++11 -O3 
 
 #
 # cudd 
 #
-CUDDPATH		=  ./cudd
-CUDDINC 		= -I$(CUDDPATH)/include
-CUDDLIBS		= -lcudd 
-CUDDLPATH   		= -L$(CUDDPATH)/lib
+CUDDINC         = -I./include
+CUDDLIBS        = -lcudd 
+CUDDLPATH       = -L./cudd/
 
 
 TARGET 			= mexSymbolicSet
-
 all: $(TARGET)
 
 $(TARGET): $(TARGET).cc
-	$(CC) COMPFLAGS='$(COMPFLAGS) $(CXXFLAGS)' -largeArrayDims $(SCOTSINC) $(CUDDINC) $(CUDDLPATH) $(CUDDLIBS) $(TARGET).cc
+	$(CC) COMPFLAGS='$(COMPFLAGS) $(CXXFLAGS)' -largeArrayDims $(CUDDINC) $(CUDDLPATH) $(CUDDLIBS) $(TARGET).cc
 

@@ -16,13 +16,12 @@ clear all;
 delete mexSymbolicSet.mex*
 
 % the ported CUDD
-cuddProjPath = fullfile('.','cuddwin64');
-cuddIncPath =  fullfile(cuddProjPath, 'include');
+cuddProjPath = fullfile('.','cuddWin64');
+cuddIncPath =  fullfile('.', 'include');
 cuddLibPath =  fullfile(cuddProjPath, 'lib', 'CUDD.lib');
 
-
 % path of includes
-ipath_bdd  = ['-I' fullfile('..','..','bdd')];
+ipath_bdd  = ['-I' fullfile('.')];
 ipath_cudd = ['-I' cuddIncPath];
 
 % linking with CUDD. You need to have the library in the path
