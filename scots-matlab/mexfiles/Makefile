@@ -1,7 +1,7 @@
 #
 # matlab root 
 #
-MATLABROOT	= ~/installed/MATLAB/R2017b/
+MATLABROOT	= /Applications/MATLAB_R2020a.app
 
 
 #
@@ -20,10 +20,10 @@ SCOTSINC		= -I$(SCOTSROOT)/bdd
 #
 # cudd 
 #
-CUDDPATH		=  $(SCOTSROOT)/cudd-3.0.0
-CUDDINC 		= -I$(CUDDPATH)
+CUDDPATH		=  ./cudd
+CUDDINC 		= -I$(CUDDPATH)/include
 CUDDLIBS		= -lcudd 
-CUDDLPATH   	= -L$(CUDDPATH)/lib
+CUDDLPATH   		= -L$(CUDDPATH)/lib
 
 
 TARGET 			= mexSymbolicSet
