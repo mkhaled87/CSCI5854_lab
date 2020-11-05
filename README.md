@@ -48,18 +48,37 @@ Follow the steps that correspond to your operating system.
 Only few operating systems and their distributions are supported.
 Contact me directly to give you iinstructions how to build the CUDD library on your OS which is used for the simulation interface.
 
-#### Windows 
+#### Windows (10 x64)
 
-- Open MATLAB
+- Open MATLAB.
 - Navigate from inside Matlab to the folder [./scots-matlab/mexfiles/](scots-matlab/mexfiles).
 - Run the Matlab script file: [makewin.m](scots-matlab/mexfiles/makewin.m).
 - Once the building finishes with success, add the following folders to Matlab's path:
+  - [./scots-matlab/](scots-matlab/).
+  - [./scots-matlab/mexfiles/](scots-matlab/mexfiles/).
+
+#### MacOS (Catalina) and Linux (Ubuntu 18.04)
+
+- Open a Terminal window and navigate to the folder [./scots-matlab/mexfiles/](scots-matlab/mexfiles).
+- For MacOS run:
+``` bash
+% mkdir cudd
+% cp ./cuddMacCatalina/libcudd.a ./cudd
+% make
+```
+- For Ubuntu run:
+``` bash
+$ mkdir cudd
+$ cp ./cuddUbuntu18.04/libcudd.a ./cudd
+$ make
+```
+- Once the building finishes with success, open Matlab add the following folders to Matlab's path:
   - [./scots-matlab/](scots-matlab/)
   - [./scots-matlab/mexfiles/](scots-matlab/mexfiles/)
 
-#### MacOS and Linux
-
 ### Building OmegaThreads's Python interface
 
+The Python interface of OmegaThreads doesn not need to be built.
+You will directly call Python modules from inisde the folder [./omegathreads-python/](omegathreads-python/).
 
 
