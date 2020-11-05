@@ -30,6 +30,8 @@ $ cd CSCI5854_lab
 $ docker build -t csci5854/latest .
 ```
 
+Building the Docker image may take up to 30 minutes and you may recieve some messages in red.
+Ignore the red-messages unless they are errors that stop the building process.
 
 ### 3- Start the container and enter it
 
