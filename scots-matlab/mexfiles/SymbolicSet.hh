@@ -21,8 +21,6 @@
 #include "cuddObj.hh"
 #include "CuddMintermIterator.hh"
 
-#include "SymbolicSet.hh"
-
 
 /* class: SymbolicSet
  *
