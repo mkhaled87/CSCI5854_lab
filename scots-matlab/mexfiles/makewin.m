@@ -18,7 +18,7 @@ delete mexSymbolicSet.mex*
 % the ported CUDD
 cuddProjPath = fullfile('.','cuddWin64');
 cuddIncPath =  fullfile('.', 'include');
-cuddLibPath =  fullfile(cuddProjPath, 'lib', 'CUDD.lib');
+cuddLibPath =  fullfile(cuddProjPath, 'CUDD.lib');
 
 % path of includes
 ipath_bdd  = ['-I' fullfile('.')];
