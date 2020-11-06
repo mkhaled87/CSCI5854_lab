@@ -35,10 +35,19 @@ Ignore the red-messages unless they are errors that stop the building process.
 
 ### 3- Start the container and enter it
 
+- For MacOS or Linux Docker hosts, run:
 ``` bash
 docker run -it -v ~/docker_shared:/docker_shared csci5854/latest
 ```
 
+- For Windows Docker hosts, run:
+``` bash
+docker run -it -v C:\docker_shared:/docker_shared csci5854/latest
+```
+
+Note that we run the docker container and share a volume (i.e., a folder) between it and the host.
+In case of MacOS or Linux Docker hosts, the shared folder is located in the at: ~/docker_shared.
+In case of Windows Docker hosts, the shared folder is located in the at: C:\docker_shared.
 
 
 ## Building the simulation interfaces
@@ -82,5 +91,43 @@ $ make
 
 The Python interface of OmegaThreads doesn not need to be built.
 You will directly call Python modules from inisde the folder [./omegathreads-python/](omegathreads-python/).
+
+
+## Testing the installation of SCOTS by example
+
+We run an example to test the installtion of SCOTS and its simulation inrerface.
+We assume you ran and enered the Docker ciontainer.
+Navigate to the vehicle example in SCOTS's examples directory:
+``` bash
+/# cd /scots/examples/hscc16/vehicle1
+```
+For SCOTS each example needs to be built separately as SCOTS itself is a header-only library.
+Build the example:
+``` bash
+/# make
+```
+Run the example's binary:
+``` bash
+/# ./vehicle
+```
+The last command will run SCOTS to synthesize a controller for an autonomous vehicle.
+The complete details about the example (e.g., vehicle dynamics, the arena, and design requirements) are given in the example source file **vehicle.cc** in the example's folder.
+Once SCOTS finiishes synthesizing the controller, copy the generated files (.BDD files) and the simulation script to the shared Docker folder:
+``` bash
+/# cp *.bdd /docker_shared/
+/# cp vehicle.m /docker_shared/
+```
+Now, keep the terminal open and open MATLAB in your host machine.
+Navigate to the shared Docker folder (**C:\docker_shared** in windows, or **~/docker_shared/** in MAcOS/Linux).
+You should see the copied files from the Docker container.
+Run the MATLAB script (vehicle.m) from inside the MATLAB command line to start the simulation:
+``` bash
+>> vehicle.m
+```
+In Windows, generating the simulation results can take up to 10 minues.
+MATLAB should then show a figure of the vehicle's arena and the path the vehicle should take to avoid some obstacles before reaching a target.
+The figure should look like:
+![vehicle_sim_out](images/sim_vehicle.png?raw=true)
+
 
 
