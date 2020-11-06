@@ -179,7 +179,7 @@ Once OmegaThreads finiishes synthesizing the controller, copy the generated file
 /# cp $PFACES_SDK_ROOT/../interface/python/*.* /docker_shared/
 ```
 
-Now, without closing the running docker container, start a new terminal on the host and simulate the controller (make sure Python 3.6+, Arcade and Parglare are installed before running this command and refer to Python's requirements below for a small installation guide):
+Now, without closing the running docker container, start a new terminal on the host and simulate the controller:
 
 ``` bash
 $ cd ~/docker_shared
