@@ -17,10 +17,9 @@ delete mexSymbolicSet.mex*
 
 % paths for includes
 ipath_bdd  = ['-I' fullfile('.')];
-ipath_cudd = ['-I' fullfile('..\cudd-3.0.0\')];
+ipath_cudd = ['-I' fullfile('..', 'cudd-3.0.0')];
 
 % build all (including the CUDD) and link inside one file
-mex('-v', ipath_bdd, ipath_cudd, 'mexSymbolicSet.cc', '..\cudd-3.0.0\*.cc', '..\cudd-3.0.0\*.c')
-
+mex('-v', ipath_bdd, ipath_cudd, 'mexSymbolicSet.cc', fullfile('..', 'cudd-3.0.0', '*.cc'), fullfile('..', 'cudd-3.0.0', '*.c'))
 
 
