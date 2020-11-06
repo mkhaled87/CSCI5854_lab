@@ -108,7 +108,7 @@ Now you need to add the simulation interface to Python search Path:
 export PYTHONPATH="${PYTHONPATH}:/home/X/omegathreads-python"
 ```
 
-- For Winodws/Powershell (we assume you cloned the repo in C:\CSCI5854_lab, change it accordingly):
+- For Winodws (PowerShell) (we assume you cloned the repo in C:\CSCI5854_lab, change it accordingly):
 ``` bash
 > $env:PYTHONPATH = "C:\CSCI5854_lab\omegathreads-python\"
 ```
