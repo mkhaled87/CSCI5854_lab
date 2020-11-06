@@ -127,6 +127,7 @@ Run the MATLAB script (vehicle.m) from inside the MATLAB command line to start t
 In Windows, generating the simulation results can take up to 10 minues.
 MATLAB should then show a figure of the vehicle's arena and the path the vehicle should take to avoid some obstacles before reaching a target.
 The figure should look like:
+
 ![vehicle_sim_out](images/sim_vehicle.png?raw=true)
 
 
