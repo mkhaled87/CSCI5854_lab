@@ -131,4 +131,42 @@ The figure should look like:
 ![vehicle_sim_out](images/sim_vehicle.png?raw=true)
 
 
+## Testing the installation of Omega by example
+
+We run an example to test the installtion of OmegaThreads and its simulation inrerface.
+We assume you ran and enered the Docker ciontainer.
+Navigate to the Pickup-Delivery drone example in OmegaThreads's examples directory:
+``` bash
+/# cd /pFaces-OmegaThreads/examples/pickupdelivery
+```
+Run the example:
+``` bash
+/# oclgrind sh solve.sh
+```
+The last command will run OmegaThreads to synthesize a controller for a Pickup-Delivery drone whose requirements is given in linear temporal langiage (LTL) fomulae.
+The complete details about the example (e.g., the drone dynamics, the arena, and LTL formula of the design requirements) are given in the example configuration file **pickupdelivery.cfg** in the example's folder.
+Once OmegaThreads finiishes synthesizing the controller, copy the generated files and the simulation script to the shared Docker folder:
+``` bash
+/# cp pickupdelivery.cfg /docker_shared/
+/# cp pickupdelivery.mdf /docker_shared/
+/# cp drone.png /docker_shared/
+/# cp simulate.py /docker_shared/
+/# cp ../../interface/python/*.py /docker_shared/
+/# cp $PFACES_SDK_ROOT/../interface/python/*.* /docker_shared/
+```
+
+Now, without closing the running docker container, start a new terminal on the host and simulate the controller (make sure Python 3.6+, Arcade and Parglare are installed before running this command and refer to Python's requirements below for a small installation guide):
+
+``` bash
+$ cd ~/docker_shared
+$ python3 simulate.py
+```
+
+The simulation script should show a figure like:
+
+![vehicle_sim_out](images/sim_pickupdelivery.gif?raw=true)
+
+
+
+
 
