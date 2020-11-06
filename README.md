@@ -89,6 +89,30 @@ $ make
 
 ### Building OmegaThreads's Python interface
 
+You need first to have Python 3.5+ installed.
+You need also the python package installer (pip).
+Then, install the following required python packages:
+``` bash
+$ pip install arcade parglare
+```
+
+For Linux, you may need an additional package (dataclasses):
+``` bash
+$ pip install arcade dataclasses
+```
+
+Now you need to add the simulation interface to Python search Path:
+
+- For MacOS/Linus (we assume you cloned the repo in /home/X/CSCI5854_lab, change it accordingly):
+``` bash
+$ python3 -c "import sys; sys.path.append('/home/X/omegathreads-python')"
+```
+
+- For Winodws/Powershell (we assume you cloned the repo in C:\CSCI5854_lab, change it accordingly):
+``` bash
+> $env:PYTHONPATH = "C:\CSCI5854_lab\omegathreads-python\"
+```
+
 The Python interface of OmegaThreads doesn not need to be built.
 You will directly call Python modules from inisde the folder [./omegathreads-python/](omegathreads-python/).
 
