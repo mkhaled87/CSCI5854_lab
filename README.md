@@ -110,7 +110,7 @@ $ python3 -c "import sys; sys.path.append('/home/X/omegathreads-python')"
 
 - For Winodws/Powershell (we assume you cloned the repo in C:\CSCI5854_lab, change it accordingly):
 ``` bash
-> $env:PYTHONPATH = "C:\CSCI5854_lab\omegathreads-python\"
+> python -c "import sys; sys.path.append('C:\\CSCI5854_lab\\omegathreads-python\\')"
 ```
 
 The Python interface of OmegaThreads doesn not need to be built.
