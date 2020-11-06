@@ -103,14 +103,14 @@ $ pip install arcade dataclasses
 
 Now you need to add the simulation interface to Python search Path:
 
-- For MacOS/Linus (we assume you cloned the repo in /home/X/CSCI5854_lab, change it accordingly):
+- For MacOS/Linus, add the following line to your shell profile file (we assume you cloned the repo in /home/X/CSCI5854_lab, change it accordingly):
 ``` bash
-$ python3 -c "import sys; sys.path.append('/home/X/omegathreads-python')"
+export PYTHONPATH="${PYTHONPATH}:/home/X/omegathreads-python"
 ```
 
 - For Winodws/Powershell (we assume you cloned the repo in C:\CSCI5854_lab, change it accordingly):
 ``` bash
-> python -c "import sys; sys.path.append('C:\\CSCI5854_lab\\omegathreads-python\\')"
+> $env:PYTHONPATH = "C:\CSCI5854_lab\omegathreads-python\"
 ```
 
 The Python interface of OmegaThreads doesn not need to be built.
