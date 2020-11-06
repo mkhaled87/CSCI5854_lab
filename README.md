@@ -55,6 +55,8 @@ In case of Windows Docker hosts, the shared folder is located in the at: C:\dock
 ### Building SCOTS's MATLAB interface
 
 You need to have MATLAB installed in your host machine (not inside the Docker container) to be able to simulate the controllers resulting from SCOTS.
+You need to also have a C++ compiler compatible with MATLAB.
+Check [this guide](https://www.mathworks.com/help/matlab/matlab_external/choose-c-or-c-compilers.html) to configure MATLAB's mex compiler with your compatible C++ compiler
 Follow the steps below: 
 
 - Open MATLAB.
