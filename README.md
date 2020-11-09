@@ -33,16 +33,16 @@ $ docker build -t csci5854/latest .
 Building the Docker image may take up to 30 minutes and you may recieve some messages in red.
 Ignore the red-messages unless they are errors that stop the building process.
 
-### 3- Start the container and enter it
+### 3- To start the container and enter it, run the command:
 
 - For MacOS or Linux Docker hosts, run:
 ``` bash
-docker run -it -v ~/docker_shared:/docker_shared csci5854/latest
+$ docker run -it -v ~/docker_shared:/docker_shared csci5854/latest
 ```
 
 - For Windows Docker hosts, run:
 ``` bash
-docker run -it -v C:\docker_shared:/docker_shared csci5854/latest
+> docker run -it -v C:\docker_shared:/docker_shared csci5854/latest
 ```
 
 Note that we run the docker container and share a volume (i.e., a folder) between it and the host.
@@ -70,7 +70,9 @@ Now, follow the steps below to get the interface installed:
 
 You need first to have Python 3.5+ installed.
 You need also the python package installer (pip).
-Then, install the following required python packages:
+Then, install the following required python packages: Arcade and Parglare.
+Start a terminal window and run:
+
 ``` bash
 $ pip install arcade parglare
 ```
