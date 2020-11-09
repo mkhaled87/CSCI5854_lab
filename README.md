@@ -160,12 +160,21 @@ Once OmegaThreads finiishes synthesizing the controller, copy the generated file
 /# cp $PFACES_SDK_ROOT/../interface/python/*.* /docker_shared/
 ```
 
-Now, without closing the running docker container, start a new terminal on the host and simulate the controller:
+Now, without closing the running docker container, start a new terminal on the host and simulate the controller (we navigate to the shared Docker folder first):
 
+For MacOS/Linux:
 ``` bash
 $ cd ~/docker_shared
 $ python3 simulate.py
 ```
+
+For Windows:
+``` bash
+> cd C:\docker_shared
+> python simulate.py
+```
+
+
 
 The simulation script should show a figure like:
 
